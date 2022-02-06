@@ -1,7 +1,7 @@
 import os
 import click
 
-
+#comment
 def register(app):
     @app.cli.group()
     def translate():
