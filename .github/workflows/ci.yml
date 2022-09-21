@@ -14,9 +14,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: Setup Python
-      - name: Run pip install - requirements.txt
-      - name: Run pip install flake8
       - name: Flake8 action
         run: flake8 app 
       - run: echo "🍏 This job's status is ${{ job.status }}."
