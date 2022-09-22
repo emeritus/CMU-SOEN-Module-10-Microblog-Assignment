@@ -47,6 +47,6 @@ def export_posts(user_id):
                    attachments=[('posts.json', 'application/json',
                               json.dumps({'posts': data}, indent=4))],
                    sync=True)
-    except:
+    except User.DoesNotExist:
         _set_task_progress(100)
         app.logger.error('Unhandled exception', exc_info=sys.exc_info())
