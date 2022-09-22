@@ -24,7 +24,6 @@ jobs:
       - name: Flake8 action
         run: | 
           flake8
-        with:
           path: "app"
         continue-on-error: true 
       - run: echo "🍏 This job's status is ${{ job.status }}."
