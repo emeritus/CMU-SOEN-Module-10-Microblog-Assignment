@@ -45,7 +45,7 @@ def export_posts(user_id):
                    html_body=render_template('email/export_posts.html',
                                              user=user),
                    attachments=[('posts.json', 'application/json',
-                              json.dumps({'posts': data}, indent=4))],
+                                 json.dumps({'posts': data}, indent=4))],
                    sync=True)
     except User.DoesNotExist:
         _set_task_progress(100)
