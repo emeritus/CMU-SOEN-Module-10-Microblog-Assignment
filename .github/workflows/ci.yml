@@ -22,7 +22,7 @@ jobs:
         run: |
           pip install flake8 pytest
       - name: Flake8 action
-        uses: py-actions/flake8@5.x
+        uses: py-actions/flake8
         with:
           ignore: "F401"
           exclude: "migrations"
