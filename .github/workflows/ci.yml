@@ -23,5 +23,8 @@ jobs:
           pip install flake8 pytest
       - name: Flake8 action
         run: | 
-          flake8 --statistics 
+          flake8
+        with:
+          path: "app"
+        continue-on-error: true 
       - run: echo "🍏 This job's status is ${{ job.status }}."
