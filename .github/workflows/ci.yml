@@ -23,5 +23,5 @@ jobs:
           pip install flake8 pytest
       - name: Flake8 action
         run: | 
-          flake8 app --exit-zer0 --statistics 
+          flake8 --statistics 
       - run: echo "🍏 This job's status is ${{ job.status }}."
