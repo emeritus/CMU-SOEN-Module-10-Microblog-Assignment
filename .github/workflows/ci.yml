@@ -23,10 +23,6 @@ jobs:
           pip install flake8 pytest
       - name: Flake8 action
         run: |
-          flake8
-        with:
-          ignore: "F401"
-          exclude: "migrations"
-          path: "app"
+          flake8 app
         continue-on-error: true 
       - run: echo "🍏 This job's status is ${{ job.status }}."
