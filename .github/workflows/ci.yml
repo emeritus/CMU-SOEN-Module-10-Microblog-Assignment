@@ -25,5 +25,6 @@ jobs:
         run: | 
           flake8
           path: "app"
+          exclude: "migrations"
         continue-on-error: true 
       - run: echo "🍏 This job's status is ${{ job.status }}."
